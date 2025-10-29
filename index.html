@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasty AI Recipes 🍰</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>🍞 Tasty Recipes</h1>
+    <p>Discover and bake delicious treats</p>
+  </header>
+
+  <main>
+    <form>
+      <div class="image-picker" id="imagePicker">
+        <label class="image-choice">
+          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
+          <img src="/baked_goods_1.jpg" alt="Baked goods 1">
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
+          <img src="/baked_goods_2.jpg" alt="Baked goods 2">
+        </label>
+        <label class="image-choice">
+          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
+          <img src="/baked_goods_3.jpg" alt="Baked goods 3">
+        </label>
+      </div>
+
+      <div class="prompt-box">
+        <label class="prompt-container">
+          <input name="prompt" placeholder="Ask Gemini for a recipe idea..." type="text"
+            value="bagaimana cara membuatnya dan apakah makanan ini sehat?">
+        </label>
+
+        <!-- Tombol upload dengan ikon + -->
+        <label class="upload-btn" title="Upload gambar kamu">
+          +
+          <input type="file" id="imageUpload" accept="image/*" hidden>
+        </label>
+
+        <button type="submit">Generate</button>
+      </div>
+    </form>
+
+    <p class="output">(Your delicious recipe will appear here)</p>
+  </main>
+
+  <footer>
+    <p>Made by Rahma</p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
