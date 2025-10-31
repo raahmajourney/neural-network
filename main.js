@@ -4,17 +4,13 @@ import MarkdownIt from 'markdown-it';
 import { maybeShowApiKeyBanner } from './gemini-api-banner';
 import './style.css';
 
-// 🔥🔥 FILL THIS OUT FIRST! 🔥🔥
-// Get your Gemini API key by:
-// - Selecting "Add Gemini API" in the "Firebase Studio" panel in the sidebar
-// - Or by visiting https://g.co/ai/idxGetGeminiKey
 let API_KEY = 'AIzaSyALI4uNqZqcjOkF8XGpSbevLx0awAEMu-Y';
 
 let form = document.querySelector('form');
 let promptInput = document.querySelector('input[name="prompt"]');
 let output = document.querySelector('.output');
 
-// --- Upload gambar baru ---
+
 const imagePicker = document.getElementById("imagePicker");
 const imageUpload = document.getElementById("imageUpload");
 
@@ -26,7 +22,7 @@ imageUpload.addEventListener("change", (e) => {
   reader.onload = (event) => {
     const src = event.target.result;
 
-    // Buat elemen baru dengan animasi fade-in
+   
     const newLabel = document.createElement("label");
     newLabel.classList.add("image-choice", "new-image");
     newLabel.innerHTML = `
@@ -34,7 +30,6 @@ imageUpload.addEventListener("change", (e) => {
       <img src="${src}" alt="Uploaded image">
     `;
 
-    // Tambahkan ke posisi paling kiri (awal container)
     imagePicker.insertBefore(newLabel, imagePicker.firstChild);
   };
 
